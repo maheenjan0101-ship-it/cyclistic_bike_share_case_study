@@ -341,7 +341,9 @@ To ensure the findings were intuitive for stakeholders, I built the dashboard as
 
 * **Multi-Page Strategic Layout:** The workbook is split into two distinct views:
     * **Dashboard 1 (User Overview & Trends):** Establishes the baseline behavioral gap between segments.
+      <img src="assets/dashboard_1_overview.png" alt="Dashboard 1 Overview" width="700">
     * **Dashboard 2 (Strategic Growth Insights):** Deep-dives into geographic and fleet-specific opportunities.
+      <img src="assets/dashboard_2_growth.png" alt="Dashboard 2 Growth" width="700">
 * **Color Hierarchy & Visual Accessibility:** Implemented a unified semantic palette (**Teal** for Casual Riders and **Bronze** for Annual Members). This consistency allows stakeholders to subconsciously identify user groups across every chart without needing to check the legend.
 * **Typography & Layout Alignment:** I configured vertical x-axis labels and optimized container padding to ensure zero label truncation (e.g., ensuring "Wednesday" is always fully legible). This creates a clean, "laser-straight" visual alignment that maintains executive-level professionalism across multi-chart views.
 
