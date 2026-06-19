@@ -1,5 +1,4 @@
 -- Executed query to track monthly volume fluctuations and duration elasticity across the 12-month timeline: 
-SQL 
 SELECT  
 member_casual,  
 month_name,  
