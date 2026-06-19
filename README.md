@@ -25,6 +25,14 @@
 **Impact**: This project demonstrates the ability to bridge the gap between raw, multi-million-row datasets and executive-level decision-making, providing a actionable "Growth Playbook" for the marketing team to boost membership acquisition and operational efficiency.
 
 ---
+### Explore the Live Dashboard
+To interact with the full, live analytical suite on Tableau Public, click the link below:
+
+**[Cyclistic Interactive Performance Dashboard](https://public.tableau.com/app/profile/maheen.jan/viz/CyclisticBike-ShareCaseStudy_17813462156300/StrategicGrowthInsights)**
+
+*Note: You can use the tabs at the top of the dashboard to toggle between "User Overview" and "Strategic Growth Insights."*
+
+---
 
 ## Phase 1: Ask — Business Task Statement
 
@@ -352,12 +360,13 @@ To ensure the findings were intuitive for stakeholders, I built the dashboard as
 **Why this matters:** Professional dashboards are not just about showing data; they are about reducing the "cognitive load" on the reader. By standardizing colors, typography, and navigation, I ensured that stakeholders spend their time interpreting business insights rather than deciphering the UI.
 
 ### 3. Visualization Catalog Breakdown 
+*View the full interactive dashboard here: [Click for Tableau Public](https://public.tableau.com/app/profile/maheen.jan/viz/CyclisticBike-ShareCaseStudy_17813462156300/StrategicGrowthInsights)*
 
 #### Dashboard 1: User Overview & Trends 
 This dashboard serves as the "Executive Pulse," providing a high-level view of system health and segment-specific behaviors.
 
 * **Total Trips by User Type (Bar Chart):** Acts as the primary data anchor, clearly isolating the baseline system volume (3.66M member trips vs. 2.01M casual trips) with precise totals displayed directly above the bars.
-  <img src="assets/Total_Trips_Bar_Chart.png" alt="Total Trips by User Type" width="700">
+  <img src="assets/Total_Trips_Bar_Chart.png" alt="Total Trips by User Type" width="300">
 * **Weekly Trip Trends (Line Chart):** Maps the operational cross-over matrix. It visually proves that annual members dominate the weekday grid (peaking Thursday), while casual riders swell exclusively on weekends (peaking Saturday).
   <img src="assets/Weekly_Trip_Trends_Line_Chart.png" alt="Weekly Trip Trends" width="700">
 * **Weekly Duration Trends (Line Chart):** Isolates baseline duration distortions via scaled average tracking. It mathematically establishes that casual riders cruise for significantly longer durations (~19–22 mins) compared to the rigid, short-trip consistency of annual members (~11–13 mins).
@@ -369,7 +378,7 @@ This dashboard serves as the "Executive Pulse," providing a high-level view of s
 This dashboard pivots from high-level system metrics to actionable "growth levers," focusing on fleet preferences and high-density geographic hubs.
 
 * **Fleet Preferences & Average Duration (Clustered Bar Chart):** Pairs choice frequency with duration tracking. This chart proves that casual riders choose electric bikes over classic options by an overwhelming 2-to-1 margin (1.35M vs 657K), while highlighting the "Classic Bike Duration Anomaly," where casual users clock an average of 28.91 minutes on traditional models.
-  <img src="assets/Fleet_Preferences_Clustered_Bar.png" alt="Fleet Preferences" width="700">
+  <img src="assets/Fleet_Preferences_Clustered_Bar.png" alt="Fleet Preferences" width="600">
 * **Top Summer Stations (Horizontal Bar Chart):** Showcases the top 10 highest-performing summer origin stations for casual riders. By utilizing the custom `Station Trip Volume` (K) axis, this visual highlights critical leisure hubs—such as *DuSable Lake Shore Dr & Monroe St* (15,344 trips)—providing the location-specific data required for hyper-targeted physical and digital marketing deployments.
   <img src="assets/Top_Summer_Stations_Bar_Chart.png" alt="Top Summer Stations" width="700">
 
@@ -405,9 +414,4 @@ The analysis proves that casual riders do not need to be convinced to use Cyclis
 * **Business Justification:** This targets the casual rider's biggest pain point (cost-sensitivity). By demonstrating how much they would save in surcharges via a membership, we provide an immediate, math-based financial incentive to convert.
 
 ---
-
-## Key Portfolio Competencies Demonstrated
-1. **Business Acumen:** Translated raw metrics into actionable revenue strategies and subscription tiers.
-2. **User Empathy & Experience Design:** Identified the structural friction points keeping casual riders from committing to annual passes.
-3. **Data Pipeline Continuity:** Every strategy is explicitly linked to optimized SQL logic and Tableau visualization insights, proving the ability to convert data into business value.
 
