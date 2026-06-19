@@ -7,7 +7,7 @@
 
 ---
 
-## Project Overview:
+## Executive Summary:
 **Objective**: This case study delivers a comprehensive, data-driven transformation strategy for Cyclistic, a fictional bike-share company. The primary goal was to identify the fundamental behavioral divergence between "Annual Members" and "Casual Riders" to engineer a clear, conversion-oriented growth strategy.
 
 **Key Technical Outcomes**:
