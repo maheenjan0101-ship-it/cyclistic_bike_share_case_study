@@ -1,5 +1,4 @@
 -- Executed query to analyze the interaction between user type, rideable type, volume, and duration: 
-SQL 
 SELECT 
 member_casual, 
 rideable_type, 
