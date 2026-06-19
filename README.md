@@ -341,9 +341,9 @@ To ensure the findings were intuitive for stakeholders, I built the dashboard as
 
 * **Multi-Page Strategic Layout:** The workbook is split into two distinct views:
     * **Dashboard 1 (User Overview & Trends):** Establishes the baseline behavioral gap between segments.
-      <img src="assets/dashboard_1_overview.png" alt="Dashboard 1 Overview" width="700">
+      <img src="assets/dashboard_1.png" alt="Dashboard 1 Overview" width="700">
     * **Dashboard 2 (Strategic Growth Insights):** Deep-dives into geographic and fleet-specific opportunities.
-      <img src="assets/dashboard_2_growth.png" alt="Dashboard 2 Growth" width="700">
+      <img src="assets/dashboard_2.png" alt="Dashboard 2 Growth" width="700">
 * **Color Hierarchy & Visual Accessibility:** Implemented a unified semantic palette (**Teal** for Casual Riders and **Bronze** for Annual Members). This consistency allows stakeholders to subconsciously identify user groups across every chart without needing to check the legend.
 * **Typography & Layout Alignment:** I configured vertical x-axis labels and optimized container padding to ensure zero label truncation (e.g., ensuring "Wednesday" is always fully legible). This creates a clean, "laser-straight" visual alignment that maintains executive-level professionalism across multi-chart views.
 
@@ -357,15 +357,21 @@ To ensure the findings were intuitive for stakeholders, I built the dashboard as
 This dashboard serves as the "Executive Pulse," providing a high-level view of system health and segment-specific behaviors.
 
 * **Total Trips by User Type (Bar Chart):** Acts as the primary data anchor, clearly isolating the baseline system volume (3.66M member trips vs. 2.01M casual trips) with precise totals displayed directly above the bars.
+  <img src="assets/Total_Trips_Bar_Chart.png" alt="Total Trips by User Type" width="700">
 * **Weekly Trip Trends (Line Chart):** Maps the operational cross-over matrix. It visually proves that annual members dominate the weekday grid (peaking Thursday), while casual riders swell exclusively on weekends (peaking Saturday).
+  <img src="assets/Weekly_Trip_Trends_Line_Chart.png" alt="Weekly Trip Trends" width="700">
 * **Weekly Duration Trends (Line Chart):** Isolates baseline duration distortions via scaled average tracking. It mathematically establishes that casual riders cruise for significantly longer durations (~19–22 mins) compared to the rigid, short-trip consistency of annual members (~11–13 mins).
+  <img src="assets/Weekly_Duration_Trends_Line_Chart.png" alt="Weekly Duration Trends" width="700">
 * **Trips by Month (Chronological Seasonal Area Chart):** Formatted with manual calendar sorting to track the system's pipeline sequentially from July through June. The resulting stacked "valley" visually emphasizes casual ridership’s high weather elasticity (92.6% winter drop) against the resilient baseline of annual members, who sustain over 100k+ trips monthly throughout the winter.
+  <img src="assets/Trips_by_Month_Area_Chart.png" alt="Trips by Month" width="700">
 
 #### Dashboard 2: Strategic Growth Insights 
 This dashboard pivots from high-level system metrics to actionable "growth levers," focusing on fleet preferences and high-density geographic hubs.
 
 * **Fleet Preferences & Average Duration (Clustered Bar Chart):** Pairs choice frequency with duration tracking. This chart proves that casual riders choose electric bikes over classic options by an overwhelming 2-to-1 margin (1.35M vs 657K), while highlighting the "Classic Bike Duration Anomaly," where casual users clock an average of 28.91 minutes on traditional models.
+  <img src="assets/Fleet_Preferences_Clustered_Bar.png" alt="Fleet Preferences" width="700">
 * **Top Summer Stations (Horizontal Bar Chart):** Showcases the top 10 highest-performing summer origin stations for casual riders. By utilizing the custom `Station Trip Volume` (K) axis, this visual highlights critical leisure hubs—such as *DuSable Lake Shore Dr & Monroe St* (15,344 trips)—providing the location-specific data required for hyper-targeted physical and digital marketing deployments.
+  <img src="assets/Top_Summer_Stations_Bar_Chart.png" alt="Top Summer Stations" width="700">
 
 
 
