@@ -110,7 +110,7 @@ UNION ALL
 SELECT * FROM `nifty-motif-496213-s3.cyclistic_tripdata.tripdata_2026_06` 
 )
 ```
-> **Source:** [View full raw script in /sql/01_data_cleaning.sql](sql/01_data_cleaning.sql)
+> **Source:** [View full raw script in /sql/01_data_consolidation.sql](sql/01_data_consolidation.sql)
 ### 2. Data Transformation & Feature Engineering 
 To prepare the dataset for behavioral analysis, three new columns were engineered directly within the processing pipeline to enable time-series and segment-based analysis: 
 * **`ride_length` (Integer):** Calculated using `TIMESTAMP_DIFF(ended_at, started_at, MINUTE)` to measure the precise duration of each trip in minutes. 
@@ -149,7 +149,7 @@ CREATE OR REPLACE TABLE `nifty-motif-496213-s3.cyclistic_tripdata.clean_trips_fi
     AND TIMESTAMP_DIFF(ended_at, started_at, MINUTE) <= 1440 
 );
 ```
-> **Source:** [View full raw script in /sql/01_data_cleaning.sql](sql/01_data_cleaning.sql)
+> **Source:** [View full raw script in /sql/02_cleaning_and_prep.sql](sql/02_cleaning_and_prep.sql)
 
 ---
 
@@ -169,7 +169,7 @@ SELECT
 FROM `nifty-motif-496213-s3.cyclistic_tripdata.clean_trips_final`  
 GROUP BY member_casual;
 ```
-> **Source:** [View full raw script in /sql/01_data_cleaning.sql](sql/01_data_cleaning.sql)
+> **Source:** [View full raw script in /sql/03_baseline_metrics.sql](sql/03_baseline_metrics.sql)
 
   * **Annual Members**: Command the majority of system usage with **3,668,166 total trips**, maintaining a tight, highly efficient average ride length of **11.82 minutes**.
 
@@ -193,7 +193,7 @@ FROM `nifty-motif-496213-s3.cyclistic_tripdata.clean_trips_final`
 GROUP BY member_casual, day_of_week  
 ORDER BY member_casual, total_trips DESC;
 ```
-> **Source:** [View full raw script in /sql/01_data_cleaning.sql](sql/01_data_cleaning.sql)
+> **Source:** [View full raw script in /sql/04_weekly_behavioral_query.sql](sql/04_weekly_behavioral_query.sql)
 
   * **Casual Riders (The "Weekend Warriors")**: Total trips peak heavily on Saturday at **413,762 trips**(Avg duration: 21.60 minutes). Their longest average rides occur on Sunday (22.29 minutes).
 
@@ -217,7 +217,7 @@ FROM `nifty-motif-496213-s3.cyclistic_tripdata.clean_trips_final`
 GROUP BY member_casual, month_name  
 ORDER BY member_casual, total_trips DESC;
 ```
-> **Source:** [View full raw script in /sql/01_data_cleaning.sql](sql/01_data_cleaning.sql)
+> **Source:** [View full raw script in /sql/05_seasonal_trends_query.sql](sql/05_seasonal_trends_query.sql)
 
   * **The Summer Surge (August Peak)**: Both groups hit maximum volume in August, with members logging 443,130 trips and casuals logging 323,533 trips. Casual riders take their most relaxed, leisurely trips in June (Avg duration: 21.41 minutes).
   * **The Winter Freeze Out**: Casual ridership plummets by **92.6%** from its summer high to a baseline of just 23,878 trips in January. Their average ride duration also bottoms out in December at 12.38 minutes.
@@ -241,7 +241,7 @@ FROM `nifty-motif-496213-s3.cyclistic_tripdata.clean_trips_final`
 GROUP BY member_casual, rideable_type 
 ORDER BY member_casual, total_trips DESC;
 ```
-> **Source:** [View full raw script in /sql/01_data_cleaning.sql](sql/01_data_cleaning.sql)
+> **Source:** [View full raw script in /sql/06_fleet_preference_query.sql](sql/06_fleet_preference_query.sql)
 
   * **The Electric Bike Domination**: Casual riders choose electric bikes over classic bikes by an overwhelming 2-to-1 margin (**1,356,141 electric trips vs. 657,201 classic trips**).
 
@@ -268,7 +268,7 @@ GROUP BY start_station_name
 ORDER BY total_summer_trips DESC 
 LIMIT 3;
 ```
-> **Source:** [View full raw script in /sql/01_data_cleaning.sql](sql/01_data_cleaning.sql)
+> **Source:** [View full raw script in /sql/07_spatial_clustering_query.sql](sql/07_spatial_clustering_query.sql)
 
   * **DuSable Lake Shore Dr & Monroe St**: 15,344 total summer trips
   * **Streeter Dr & Grand Ave (Navy Pier)**: 14,921 total summer trips
@@ -308,7 +308,7 @@ CREATE OR REPLACE TABLE `clistic-445214.cyclistic_tripdata.tableau_summary` AS (
   GROUP BY member_casual, day_of_week, month_name 
 );
 ```
-> **Source:** [View full raw script in /sql/01_data_cleaning.sql](sql/01_data_cleaning.sql)
+> **Source:** [View full raw script in /sql/08_macro_aggregation_script.sql](sql/08_macro_aggregation_script.sql)
 
 This script condensed millions of records into a highly lightweight table of under 200 rows, which was exported directly as `cyclistic_tableau_summary.csv`. This ensures the Tableau dashboard remains responsive, regardless of the size of the underlying raw dataset.
 
@@ -342,7 +342,7 @@ GROUP BY
   rideable_type,  
   start_station_name;
 ```
-> **Source:** [View full raw script in /sql/01_data_cleaning.sql](sql/01_data_cleaning.sql)
+> **Source:** [View full raw script in /sql/09_bi_optimization_query.sql](sql/09_bi_optimization_query.sql)
 
 **Analytical Justification**:
 
