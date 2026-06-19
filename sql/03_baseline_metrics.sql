@@ -1,5 +1,4 @@
 -- Executed query to calculate total trip volumes and average trip lengths by user segment: 
-SQL 
 SELECT  
 member_casual,  
 COUNT(*) AS total_trips,  
